@@ -3,11 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
   <title>Dr Khindol Madraimov — 30 years in Education IT</title>
   <meta name="description" content="Head of IT at the Ministry of Preschool Education of Uzbekistan. Thirty years of education IT infrastructure, from a 386 running Windows 3.1 to national-scale EMIS. Builder, writer, published editor." />
+  <meta name="author" content="Dr Khindol Madraimov" />
+  <meta name="keywords" content="Khindol Madraimov, OpenEMIS, Uzbekistan, Ministry of Preschool Education, EMIS, education IT, Laravel, CakePHP, Angular, chatbot, RAG, Silk Road, Samarkand" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://me.drkhindol.uk/" />
+
+  <!-- Open Graph / Facebook / LinkedIn / Telegram -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Dr Khindol Madraimov" />
+  <meta property="og:title" content="Dr Khindol Madraimov — 30 years in Education IT" />
+  <meta property="og:description" content="Head of IT at the Ministry of Preschool Education of Uzbekistan. Thirty years of education IT infrastructure, from a 386 running Windows 3.1 to national-scale EMIS. Builder, writer, published editor." />
+  <meta property="og:url" content="https://me.drkhindol.uk/" />
+  <meta property="og:image" content="https://me.drkhindol.uk/photos/khindol-sagalassos.jpg" />
+  <meta property="og:image:alt" content="Dr Khindol Madraimov at Sagalassos, Turkey" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="profile:first_name" content="Khindol" />
+  <meta property="profile:last_name" content="Madraimov" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr Khindol Madraimov — 30 years in Education IT" />
+  <meta name="twitter:description" content="Head of IT at the Ministry of Preschool Education of Uzbekistan. Thirty years of education IT infrastructure, from a 386 running Windows 3.1 to national-scale EMIS." />
+  <meta name="twitter:image" content="https://me.drkhindol.uk/photos/khindol-sagalassos.jpg" />
+  <meta name="twitter:image:alt" content="Dr Khindol Madraimov at Sagalassos, Turkey" />
+
+  <!-- Performance: preconnect / dns-prefetch to critical third parties -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cleancoders.com" />
+  <link rel="dns-prefetch" href="https://d1asq8tlpxq2sv.cloudfront.net" />
+
   <link rel="icon" href="https://d1asq8tlpxq2sv.cloudfront.net/images/favicons/favicon-16x16.png" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- JSON-LD: Person schema for rich search results / knowledge panel eligibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr Khindol Madraimov",
+    "givenName": "Khindol",
+    "familyName": "Madraimov",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Head of IT",
+    "worksFor": {
+      "@type": "GovernmentOrganization",
+      "name": "Ministry of Preschool Education of the Republic of Uzbekistan",
+      "url": "https://mdo.uz/"
+    },
+    "description": "Thirty years of education IT infrastructure, from a 386 running Windows 3.1 to national-scale EMIS. Builder, writer, published editor.",
+    "url": "https://me.drkhindol.uk/",
+    "image": "https://me.drkhindol.uk/photos/khindol-sagalassos.jpg",
+    "nationality": "Uzbek",
+    "knowsAbout": [
+      "Education Management Information Systems",
+      "OpenEMIS",
+      "Laravel",
+      "CakePHP",
+      "Angular",
+      "Retrieval-Augmented Generation",
+      "Government IT",
+      "Chatbots",
+      "DevOps"
+    ],
+    "knowsLanguage": ["Uzbek", "Russian", "English"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Tashkent State University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/khindol-madraimov/",
+      "https://github.com/tixuz"
+    ]
+  }
+  </script>
 
   <style>
     /* ── Fonts ─────────────────────────────────────────── */
@@ -1155,6 +1234,171 @@
     .btn-form:hover { background: oklch(93% 0.06 215); transform: translateY(-1px); }
 
     /* ══════════════════════════════════════════════════════
+       ACTIVITY CAROUSEL (LinkedIn-style)
+    ══════════════════════════════════════════════════════ */
+    .activity-wrap {
+      position: relative;
+      margin-top: var(--space-5);
+    }
+    .activity-carousel {
+      display: flex;
+      gap: var(--space-4);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: var(--space-2) var(--space-1) var(--space-4);
+      scrollbar-width: none;
+    }
+    .activity-carousel::-webkit-scrollbar { display: none; }
+    .activity-card {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      background: oklch(12% 0.032 225 / 0.32);
+      backdrop-filter: blur(18px) saturate(1.4);
+      -webkit-backdrop-filter: blur(18px) saturate(1.4);
+      border: 1px solid oklch(68% 0.14 220 / 0.16);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--text-1);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    [data-theme="light"] .activity-card {
+      background: oklch(100% 0 0 / 0.38);
+      border-color: oklch(46% 0.13 225 / 0.14);
+    }
+    .activity-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 28px oklch(0% 0 0 / 0.18);
+    }
+    .activity-card-media {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, oklch(46% 0.13 225), oklch(46% 0.11 180));
+      overflow: hidden;
+      position: relative;
+    }
+    .activity-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .activity-card-body {
+      padding: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      flex: 1;
+    }
+    .activity-card-kicker {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .activity-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text-1);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .activity-card-excerpt {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--text-2);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .activity-card-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.75rem;
+      color: var(--text-3);
+      margin-top: auto;
+      padding-top: var(--space-2);
+      border-top: 1px solid var(--border);
+    }
+    .activity-card-meta .fa-linkedin { color: #0a66c2; }
+    .activity-card--placeholder .activity-card-media {
+      background: linear-gradient(135deg, oklch(40% 0.08 70), oklch(46% 0.13 225));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: oklch(100% 0 0 / 0.55);
+      font-size: 2.2rem;
+    }
+    .activity-card-video-badge {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .activity-card-video-badge::before {
+      content: '';
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: oklch(100% 0 0 / 0.9);
+      box-shadow: 0 6px 22px oklch(0% 0 0 / 0.35);
+    }
+    .activity-card-video-badge i {
+      position: absolute;
+      color: var(--accent-deep);
+      font-size: 1.4rem;
+      margin-left: 4px;
+    }
+    .activity-card-video-duration {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: oklch(0% 0 0 / 0.7);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    .activity-nav {
+      position: absolute;
+      top: calc(50% - var(--space-4));
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-1);
+      cursor: pointer;
+      box-shadow: 0 4px 14px oklch(0% 0 0 / 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+    .activity-nav:hover { background: var(--accent); color: #fff; transform: translateY(-50%) scale(1.05); }
+    .activity-nav--prev { left: -18px; }
+    .activity-nav--next { right: -18px; }
+    @media (max-width: 640px) {
+      .activity-card { flex: 0 0 82%; }
+      .activity-nav { display: none; }
+    }
+
+    /* ══════════════════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════════════════ */
     .footer {
@@ -1276,7 +1520,7 @@
       <!-- Right: Live dashboard mockup -->
       <div class="hero-visual">
         <div class="hero-portrait-float" aria-hidden="false">
-          <img src="photos/khindol-sagalassos.jpg" alt="Dr Khindol Madraimov at Sagalassos, Turkey" loading="lazy" />
+          <img src="photos/khindol-sagalassos.jpg" alt="Dr Khindol Madraimov at Sagalassos, Turkey" fetchpriority="high" decoding="async" />
         </div>
         <div class="hero-card" data-aos="fade-up" data-aos-duration="700">
           <div class="hcard-header">
@@ -1315,6 +1559,129 @@
             <div style="font-size:.8rem; font-weight:600; color:var(--text-1);">Last deployment successful</div>
             <div style="font-size:.72rem; color:var(--text-3);">Async Alert Queue · POCOR-9509 · production</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ═══ ACTIVITY (LinkedIn carousel) ═══════════════ -->
+  <section id="activity">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
+        <span class="eyebrow">Activity · live feed</span>
+        <h2 class="section-title">Recent posts<br/>on LinkedIn</h2>
+        <p class="section-lead">
+          Short-form writing — mostly about AI tooling, agentic workflows, and things I figure out while running EMIS at the ministry.
+          <a href="https://www.linkedin.com/in/khindol-madraimov/" target="_blank" rel="noopener" style="color:var(--accent);">Follow on LinkedIn →</a>
+        </p>
+      </div>
+
+      <div class="activity-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="100">
+        <button class="activity-nav activity-nav--prev" onclick="scrollActivity(-1)" aria-label="Previous posts">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="activity-nav activity-nav--next" onclick="scrollActivity(1)" aria-label="Next posts">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="activity-carousel" id="activityCarousel">
+
+          <!-- Card 1 — Telegram Webhook Debugger -->
+          <a class="activity-card"
+             href="https://www.linkedin.com/posts/khindol-madraimov_opensource-devops-python-activity-7437485850378002432-A703"
+             target="_blank" rel="noopener">
+            <div class="activity-card-media">
+              <img src="photos/linkedin-1.jpg" alt="From the Silk Road to Webhook Stability — illustration of Dr Khindol with a Telegram tablet and a Samarkand dome" loading="lazy" />
+            </div>
+            <div class="activity-card-body">
+              <span class="activity-card-kicker">Open source · Python</span>
+              <div class="activity-card-title">From the Silk Road to Webhook Stability: Lessons from Uzbekistan's OpenEMIS</div>
+              <div class="activity-card-excerpt">Open-sourced the Telegram Webhook Debugger — originally an internal tool to keep our educational bots in Uzbekistan synchronized. Receive webhooks directly in Telegram while running locally, log full payloads, manage via admin commands.</div>
+              <div class="activity-card-meta">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn · Read on LinkedIn
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 — Soulmate -->
+          <a class="activity-card"
+             href="https://www.linkedin.com/posts/khindol-madraimov_soulmate-give-your-ai-agents-a-soul-activity-7443317008848429056-M5EI"
+             target="_blank" rel="noopener">
+            <div class="activity-card-media">
+              <img src="photos/linkedin-2.jpg" alt="Soulmate — illustration of Dr Khindol in front of Registan with a directory tree overlay" loading="lazy" />
+            </div>
+            <div class="activity-card-body">
+              <span class="activity-card-kicker">AI agents · Claude Code</span>
+              <div class="activity-card-title">Soulmate: Give Your AI Agents a Soul, Not a Costume</div>
+              <div class="activity-card-excerpt">Persistent identity and a "soul file system" for AI collaborators. Clean split between named, opinionated Agents (cross-project memory) and stateless Subagents (single-task robots). Samurai Haiku, Marshal Sunny, Adviser Arastu — the AI army.</div>
+              <div class="activity-card-meta">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn · Read on LinkedIn
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 — Arastu / Advisor (video) -->
+          <a class="activity-card"
+             href="https://www.linkedin.com/posts/khindol-madraimov_claudecode-ai-soulmate-activity-7448813385057497088-8NtH"
+             target="_blank" rel="noopener">
+            <div class="activity-card-media">
+              <img src="photos/linkedin-3.jpg" alt="From Arastu to Official Advisor — poster frame from the LinkedIn video" loading="lazy" />
+              <div class="activity-card-video-badge" aria-hidden="true">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="activity-card-video-duration">0:08 · VIDEO</div>
+            </div>
+            <div class="activity-card-body">
+              <span class="activity-card-kicker">Claude Code · Anthropic</span>
+              <div class="activity-card-title">From "Arastu" to Official Advisor: The Era of the AI Mentor is Here</div>
+              <div class="activity-card-excerpt">Two weeks after I named my Opus-based agent "Adviser Arastu" in Soulmate, Anthropic shipped <code>/advisor</code> in public beta — an Opus advisor paired with a Sonnet executor. Same pattern, now official.</div>
+              <div class="activity-card-meta">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn · Watch on LinkedIn
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 — LM Studio / Hybrid orchestration -->
+          <a class="activity-card"
+             href="https://www.linkedin.com/posts/khindol-madraimov_ai-claudecode-localllm-activity-7448665064154275840-ASJi"
+             target="_blank" rel="noopener">
+            <div class="activity-card-media">
+              <img src="photos/linkedin-4.jpg" alt="From frustration to orchestration — illustration of Dr Khindol with Qwen and Claude robotic agents" loading="lazy" />
+            </div>
+            <div class="activity-card-body">
+              <span class="activity-card-kicker">Hybrid AI · Local + Cloud</span>
+              <div class="activity-card-title">From frustration to orchestration — 30 days with Claude Code</div>
+              <div class="activity-card-excerpt">Built an <code>/lm-studio</code> skill that wires local LM Studio models (Qwen 3.5 9B on an M1) into Claude's agentic workflow alongside cloud Opus, Sonnet, and Haiku. A Sonnet agent dispatches tasks to cloud Haiku and local Qwen in parallel — no proxy layer.</div>
+              <div class="activity-card-meta">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn · Read on LinkedIn
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 5 — "More" tail card -->
+          <a class="activity-card activity-card--placeholder"
+             href="https://www.linkedin.com/in/khindol-madraimov/"
+             target="_blank" rel="noopener">
+            <div class="activity-card-media">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="activity-card-body">
+              <span class="activity-card-kicker">All posts</span>
+              <div class="activity-card-title">More on LinkedIn</div>
+              <div class="activity-card-excerpt">Agentic workflows, AI mentorship experiments, EMIS infrastructure notes from Uzbekistan — and the occasional rant about async queues. 111 followers and counting.</div>
+              <div class="activity-card-meta">
+                <i class="fa-brands fa-linkedin"></i>
+                linkedin.com/in/khindol-madraimov
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </div>
@@ -1490,7 +1857,7 @@
 
         <div class="testimonial-card" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="200">
           <span class="quote-mark">"</span>
-          <p class="quote-text">Personal projects that belong here too: <code>edusys</code> (this very site you are reading), <code>caffecito</code> (a small café ordering tool), <code>gws-sheets</code> (a Claude Code skill), <code>soulmate</code>, <code>namozimbot</code>. Not everything I build is enterprise-scale. Some of it is just for me and my family.</p>
+          <p class="quote-text">Personal projects that belong here too: <a href="https://github.com/tixuz/edusys" target="_blank" rel="noopener" style="color:var(--accent);"><code>edusys</code></a> (this very site you are reading), <a href="https://github.com/tixuz/caffecito" target="_blank" rel="noopener" style="color:var(--accent);"><code>caffecito</code></a> (a small café ordering tool), <a href="https://github.com/tixuz/gws-sheets" target="_blank" rel="noopener" style="color:var(--accent);"><code>gws-sheets</code></a> (a Claude Code skill), <a href="https://github.com/tixuz/soulmate" target="_blank" rel="noopener" style="color:var(--accent);"><code>soulmate</code></a>, <a href="https://github.com/tixuz/namozimbot" target="_blank" rel="noopener" style="color:var(--accent);"><code>namozimbot</code></a>. Not everything I build is enterprise-scale. Some of it is just for me and my family.</p>
           <figure style="margin:var(--space-4) 0 0;">
             <img src="photos/khindol-korea.jpg"
                  alt="Dr Khindol on a trip in Korea, wearing the Uzbekistan national team jacket"
@@ -1700,6 +2067,15 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, offset: 80 });
+
+    /* ── Activity Carousel ─────────────────────────────── */
+    function scrollActivity(direction) {
+      const track = document.getElementById('activityCarousel');
+      if (!track) return;
+      const card = track.querySelector('.activity-card');
+      const step = card ? card.offsetWidth + 16 /* gap */ : 340;
+      track.scrollBy({ left: direction * step, behavior: 'smooth' });
+    }
 
     /* ── Theme Toggle ─────────────────────────────────── */
     const THEME_KEY = 'edusys-theme';
@@ -2131,15 +2507,15 @@
       <div class="cw-msg cw-msg--bot">
         <div class="cw-msg-avatar"><img src="photos/khindol-warm.jpg" alt="Dr Khindol" loading="lazy" /></div>
         <div class="cw-bubble">
-          Hi — I can help with OpenEMIS setup, EMIS administration, or anything about education IT infrastructure. Ask anything.
+          Salom! Bu vazirlik saytlari uchun qurilgan yordamchi namunasi. Men OpenEMIS bilim bazam asosida javob beraman — o'zbek, rus yoki ingliz tilida. Try a prompt below, or ask your own in any of the three languages.
         </div>
       </div>
     </div>
 
     <div class="cw-suggestions" id="cw-suggestions">
-      <button class="cw-suggestion" onclick="sendSuggestion(this)">How do I set up OpenEMIS?</button>
-      <button class="cw-suggestion" onclick="sendSuggestion(this)">Role &amp; security model</button>
-      <button class="cw-suggestion" onclick="sendSuggestion(this)">Async alert queue</button>
+      <button class="cw-suggestion" onclick="sendSuggestion(this)">O'zbek tilida javob bera olasizmi?</button>
+      <button class="cw-suggestion" onclick="sendSuggestion(this)">How do you ground answers in ministry documents?</button>
+      <button class="cw-suggestion" onclick="sendSuggestion(this)">What keeps answers safe and auditable for gov use?</button>
       <button class="cw-suggestion" onclick="sendSuggestion(this)">Why "Crash and Quit Driven Development"?</button>
     </div>
 
@@ -2190,17 +2566,29 @@
       if (e.key === 'Escape' && chatWindow.classList.contains('is-open')) closeChat();
     });
 
-    /* Demo bot responses */
-    const botResponses = {
-      'how do i set up openemis?':
-        `Great question! Setting up OpenEMIS typically involves:\n\n1. **Server provisioning** — Linux (Ubuntu 20.04+) with at least 4GB RAM\n2. **Database setup** — PostgreSQL 13+ with UTF8 collation\n3. **Application install** — Laravel-based PHP application\n4. **Module activation** — Enrollment, Assessment, HR, etc.\n\nI handle all of this in my System Administration service. Want me to <a href="#cta">connect you with Dr Khindol</a>?`,
-      'user role management':
-        `OpenEMIS has a hierarchical role system:\n\n• **Super Admin** — Full system access\n• **Country Admin** — National-level access\n• **Area/District** — Regional administration\n• **School Principal** — Single institution\n• **Teacher** — Class & student data\n\nRoles cascade down, so district admins see all schools in their district. I can help you design the right permission matrix for your ministry structure.`,
-      'backup & restore':
-        `My recommended backup strategy for OpenEMIS:\n\n• **Daily DB dumps** to object storage (S3 or local)\n• **Weekly full-system snapshots**\n• **Restore drills** every quarter — critical!\n\nThe most common failure point I see is ministries who backup religiously but never test restores. I include quarterly restore verification in all my operations contracts.`,
-      'book a discovery call':
-        `Excellent! I can help with that. You can fill in the short form at the <a href="#cta">bottom of this page</a> and I'll respond within one business day.\n\nAlternatively, if you have an urgent situation (upcoming school year, data migration deadline, etc.) mention that in the form — I'll prioritise accordingly.`,
-    };
+    /* Canned responses — keyword-matched, keyword arrays in Uzbek/Russian/English */
+    const botResponses = [
+      {
+        match: ["o'zbek", "o`zbek", 'uzbek', 'russian', 'rus tili', 'russ', 'language', 'tili', 'multilingual'],
+        response:
+          `Ha, albatta. Arxitektura quyidagicha:\n\n• Savol tili avtomatik aniqlanadi (UZ / RU / EN)\n• Bilim bazasi hujjatlari har bir tilda alohida indekslanadi\n• Javob savol tilida beriladi, manbalarga havolalar bilan\n• Agar ma'lumot faqat bitta tilda bo'lsa — tarjima qilinadi va bu foydalanuvchiga ko'rsatiladi\n\nThe same widget, three languages, one knowledge base. If your agency needs this: <strong>khindol.madraimov@gmail.com</strong>`,
+      },
+      {
+        match: ['ground', 'grounding', 'document', 'documents', 'knowledge base', ' kb', 'rag', 'hujjat', 'manba', 'source'],
+        response:
+          `Standard retrieval-augmented pattern, tuned for ministry content:\n\n• Ingest PDF / DOCX / HTML → split into ~500-token chunks\n• Embed each chunk, store in a vector DB (pgvector or Qdrant)\n• On a query: retrieve top-K chunks, feed to the LLM with a strict "answer only from these sources" instruction\n• Every answer cites the source document and section\n• No matching source → bot says "I don't have that in the KB" instead of inventing\n\nSo if a citizen asks about a 2021 ministry order, the bot either quotes it or admits it's not there. No hallucinations, no PR incidents.`,
+      },
+      {
+        match: ['safe', 'audit', 'auditable', 'security', 'gov', 'pii', 'redact', 'xavfsiz'],
+        response:
+          `Four things I build into every gov-facing chatbot:\n\n• **Audit log** — every Q+A, with timestamp and session ID, retained per ministry policy\n• **PII redaction** on inputs — phone numbers, passport IDs, INN stripped before anything is logged or sent to the LLM\n• **Rate limiting** per IP and per session, with a human-handoff chip when a question hits a risk tag (legal, medical, financial)\n• **Output moderation** — block, rewrite, or escalate; the ministry's security team can read every rule\n\nEverything auditable. No black box.`,
+      },
+      {
+        match: ['crash', 'quit', 'cqdd', 'driven development'],
+        response:
+          `Phrase I coined for the habit of letting a system crash loudly and exit, rather than wrapping every call in try/catch and limping along:\n\n• Silent failures are the most expensive bugs I've ever fixed — you find them six months later when the data is already wrong\n• A crash with a stack trace is a gift — it tells you exactly where and why\n• Catch only at the boundaries (request handler, queue worker) where you can log, alert, and exit cleanly\n• Inside business logic: let it explode\n\nControversial take. I still defend it in ticket threads.`,
+      },
+    ];
 
     function scrollToBottom() {
       messages.scrollTop = messages.scrollHeight;
@@ -2252,12 +2640,12 @@
     }
 
     function getBotResponse(text) {
-      const normalised = text.toLowerCase().trim();
-      for (const [key, resp] of Object.entries(botResponses)) {
-        if (normalised.includes(key.split(' ')[0]) || normalised === key) return resp;
+      const n = text.toLowerCase().trim();
+      for (const { match, response } of botResponses) {
+        if (match.some(kw => n.includes(kw))) return response;
       }
-      // Fallback
-      return `Thanks for your question about "<strong>${text}</strong>".\n\nI would be best placed to answer that properly. <a href="#cta">Book a free discovery call</a> and I'll address it specifically for your setup.`;
+      // Fallback — the honest version: sample KB, bigger pattern
+      return `Good question. This sample only knows a handful of topics from my own KB — but the same architecture handles any domain you point it at.\n\nA tiny example from the other end of the scale: <strong>caffecito</strong>, a small café ordering tool I built for family use, runs on the same pattern — grounded on a single menu PDF instead of a ministry archive. Same code, different corpus.\n\nIf you want a grounded, auditable assistant on your ministry, agency, or small-business site: <strong>khindol.madraimov@gmail.com</strong>`;
     }
 
     function sendMessage(text) {

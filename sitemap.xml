@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://me.drkhindol.uk/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://me.drkhindol.uk/photos/khindol-sagalassos.jpg</image:loc>
+      <image:caption>Dr Khindol Madraimov at Sagalassos, Turkey</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://me.drkhindol.uk/photos/khindol-korea.jpg</image:loc>
+      <image:caption>Dr Khindol Madraimov on the road in Korea</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://me.drkhindol.uk/photos/khindol-warm.jpg</image:loc>
+      <image:caption>Dr Khindol Madraimov portrait</image:caption>
+    </image:image>
+  </url>
+</urlset>
