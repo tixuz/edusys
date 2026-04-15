@@ -1,4 +1,5 @@
 .DS_Store
+photos-oversharpened-backup/
 .playwright-mcp/
 
 # Dev screenshots only — allow photos/
