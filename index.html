@@ -61,7 +61,7 @@
       --text-2:      oklch(70% 0.01 60);      /* muted body */
       --text-3:      oklch(50% 0.012 60);     /* captions */
 
-      --nav-bg:      oklch(19% 0.018 60 / 0.92);
+      --nav-bg:      oklch(19% 0.018 60 / 0.55);
       --nav-border:  oklch(68% 0.14 220 / 0.18);
       --overlay:     oklch(0% 0 0 / 0.5);
     }
@@ -79,7 +79,7 @@
       --text-2:      oklch(42% 0.02 65);      /* muted body */
       --text-3:      oklch(58% 0.015 65);     /* captions */
 
-      --nav-bg:      oklch(98% 0.008 80 / 0.95);
+      --nav-bg:      oklch(98% 0.008 80 / 0.58);
       --nav-border:  oklch(46% 0.13 225 / 0.2);
       --overlay:     oklch(0% 0 0 / 0.35);
     }
@@ -116,16 +116,16 @@
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      background: oklch(13% 0.025 225 / 0.58);
+      background: oklch(13% 0.025 225 / 0.22);
       transition: background 0.35s cubic-bezier(0.4,0,0.2,1);
     }
     [data-theme="light"] .sea-tint {
-      background: oklch(96% 0.010 210 / 0.36);
+      background: oklch(96% 0.010 210 / 0.15);
     }
 
     /* ── Ice-glass surface ─────────────────────────────── */
     .glass {
-      background: oklch(12% 0.032 225 / 0.70);
+      background: oklch(12% 0.032 225 / 0.32);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
@@ -133,7 +133,7 @@
                   inset 0 1px 0 oklch(100% 0 0 / 0.07);
     }
     [data-theme="light"] .glass {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border: 1px solid oklch(100% 0 0 / 0.58);
@@ -365,7 +365,7 @@
       position: relative;
     }
     .hero-card {
-      background: oklch(12% 0.032 225 / 0.72);
+      background: oklch(12% 0.032 225 / 0.32);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.14);
@@ -375,7 +375,7 @@
       animation: drift 8s ease-in-out infinite;
     }
     [data-theme="light"] .hero-card {
-      background: oklch(100% 0 0 / 0.80);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -552,14 +552,14 @@
       margin-bottom: var(--space-7);
       padding: var(--space-6) var(--space-7);
       border-radius: var(--radius-lg);
-      background: oklch(12% 0.032 225 / 0.68);
+      background: oklch(12% 0.032 225 / 0.55);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
       box-shadow: 0 4px 28px oklch(0% 0 0 / 0.28), inset 0 1px 0 oklch(100% 0 0 / 0.07);
     }
     [data-theme="light"] .section-header {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.56);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -570,14 +570,14 @@
     .hero-copy {
       padding: var(--space-6) var(--space-7);
       border-radius: var(--radius-lg);
-      background: oklch(12% 0.032 225 / 0.68);
+      background: oklch(12% 0.032 225 / 0.55);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
       box-shadow: 0 4px 28px oklch(0% 0 0 / 0.30), inset 0 1px 0 oklch(100% 0 0 / 0.07);
     }
     [data-theme="light"] .hero-copy {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.56);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -632,7 +632,7 @@
     }
 
     .svc-card {
-      background: oklch(12% 0.032 225 / 0.70);
+      background: oklch(12% 0.032 225 / 0.32);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
@@ -642,7 +642,7 @@
       transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
     [data-theme="light"] .svc-card {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -803,7 +803,7 @@
     }
     .process-step {
       position: relative; z-index: 1;
-      background: oklch(12% 0.032 225 / 0.68);
+      background: oklch(12% 0.032 225 / 0.30);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
@@ -812,7 +812,7 @@
       padding: var(--space-5);
     }
     [data-theme="light"] .process-step {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.36);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -859,7 +859,7 @@
       .testimonials-grid { grid-template-columns: 1fr; }
     }
     .testimonial-card {
-      background: oklch(12% 0.032 225 / 0.70);
+      background: oklch(12% 0.032 225 / 0.32);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
@@ -871,7 +871,7 @@
       transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
     [data-theme="light"] .testimonial-card {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -962,7 +962,7 @@
       .showcase-grid { grid-template-columns: 1fr; }
     }
     .case-card {
-      background: oklch(12% 0.032 225 / 0.70);
+      background: oklch(12% 0.032 225 / 0.32);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border: 1px solid oklch(68% 0.14 220 / 0.13);
@@ -972,7 +972,7 @@
       transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
     }
     [data-theme="light"] .case-card {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-color: oklch(100% 0 0 / 0.58);
@@ -1158,14 +1158,14 @@
        FOOTER
     ══════════════════════════════════════════════════════ */
     .footer {
-      background: oklch(12% 0.032 225 / 0.72);
+      background: oklch(12% 0.032 225 / 0.35);
       backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(0.92);
       border-top: 1px solid oklch(68% 0.14 220 / 0.14);
       padding: var(--space-7) 0 var(--space-5);
     }
     [data-theme="light"] .footer {
-      background: oklch(100% 0 0 / 0.78);
+      background: oklch(100% 0 0 / 0.38);
       backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       -webkit-backdrop-filter: blur(22px) saturate(1.6) brightness(1.03);
       border-top-color: oklch(100% 0 0 / 0.55);
