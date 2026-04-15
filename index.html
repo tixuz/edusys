@@ -1527,7 +1527,7 @@
             <span class="hcard-title">Career Snapshot</span>
             <span class="hcard-status">
               <span class="status-dot"></span>
-              All systems operational
+              Currently shipping
             </span>
           </div>
           <div class="metric-row">
@@ -1541,7 +1541,7 @@
             </div>
             <div class="metric-item">
               <div class="metric-val">28</div>
-              <div class="metric-lbl">Open-source repos</div>
+              <div class="metric-lbl">Years in ministry IT</div>
             </div>
           </div>
           <div class="hcard-modules">
@@ -1695,7 +1695,7 @@
       <div class="section-header" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
         <span class="eyebrow">What I do</span>
         <h2 class="section-title">End to end,<br/>not over the fence</h2>
-        <p class="section-lead">I write the migration, the service class, the Angular component, the feature tests, and the release note — and I defend the scope of all four in the ticket thread.</p>
+        <p class="section-lead">I write the migration, the service class, the Angular component, the feature tests, and the release note — then defend the scope in the ticket thread.</p>
       </div>
 
       <div class="services-layout" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="100">
@@ -1705,7 +1705,7 @@
             <div class="svc-head-label">Core Service</div>
             <div class="svc-head-title">Feature Delivery, End to End</div>
             <div class="svc-head-desc">
-              New features shipped against production OpenEMIS. Database migration with backup tables, Laravel v5 API with Swagger, CakePHP integration, Angular frontend, feature tests, release documentation — delivered on one branch, defended in the ticket thread.
+              New features shipped against production OpenEMIS, end-to-end on a single branch. Database migration with backup tables, Laravel v5 API with Swagger, CakePHP integration, Angular frontend, feature tests, release documentation — and I defend the scope in the ticket thread.
             </div>
           </div>
           <div class="svc-body">
@@ -1772,7 +1772,7 @@
         <div class="svc-card svc-card--md" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-delay="0">
           <div class="svc-md-icon"><i class="fa-solid fa-network-wired"></i></div>
           <h3>Honest Re-estimates</h3>
-          <p>When a one-day ticket grew into a week of cross-cutting work across four tables and a shared Trait, I say so — with a breakdown, not a shrug. Scope creep that nobody flags becomes the next developer's retrospective problem.</p>
+          <p>If a one-day ticket turns into a week of cross-cutting work, I say so clearly and break down why. Unflagged scope creep always becomes somebody else's problem later.</p>
         </div>
         <div class="svc-card svc-card--md" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-delay="80">
           <div class="svc-md-icon"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -1791,7 +1791,7 @@
       <div class="section-header" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
         <span class="eyebrow">How I work</span>
         <h2 class="section-title">Read the code first,<br/>write the code second</h2>
-        <p class="section-lead">Four habits that have outlasted three language generations and two database engines.</p>
+        <p class="section-lead">Four habits that have survived thirty years of changing stacks.</p>
       </div>
       <div class="process-steps">
         <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-delay="0">
@@ -1826,7 +1826,7 @@
       <div class="section-header" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
         <span class="eyebrow">Writing & Code</span>
         <h2 class="section-title">Work in the open</h2>
-        <p class="section-lead">Twenty-eight public repositories. A blog going back to the early days of Docker and CiviCRM. The phrase "Crash and Quit Driven Development" — which I coined and still defend.</p>
+        <p class="section-lead">A public trail of code, writing, and technical arguments going back years. Including one phrase I still defend: "Crash and Quit Driven Development."</p>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="0">
@@ -2516,6 +2516,7 @@
       <button class="cw-suggestion" onclick="sendSuggestion(this)">O'zbek tilida javob bera olasizmi?</button>
       <button class="cw-suggestion" onclick="sendSuggestion(this)">How do you ground answers in ministry documents?</button>
       <button class="cw-suggestion" onclick="sendSuggestion(this)">What keeps answers safe and auditable for gov use?</button>
+      <button class="cw-suggestion" onclick="sendSuggestion(this)">Can this answer citizen FAQs from ministry documents?</button>
       <button class="cw-suggestion" onclick="sendSuggestion(this)">Why "Crash and Quit Driven Development"?</button>
     </div>
 
@@ -2584,6 +2585,11 @@
           `Four things I build into every gov-facing chatbot:\n\n• **Audit log** — every Q+A, with timestamp and session ID, retained per ministry policy\n• **PII redaction** on inputs — phone numbers, passport IDs, INN stripped before anything is logged or sent to the LLM\n• **Rate limiting** per IP and per session, with a human-handoff chip when a question hits a risk tag (legal, medical, financial)\n• **Output moderation** — block, rewrite, or escalate; the ministry's security team can read every rule\n\nEverything auditable. No black box.`,
       },
       {
+        match: ['citizen', 'citizens', 'faq', 'faqs', 'public', 'public-facing', 'fuqaro', 'fuqarolar', 'grazhdan'],
+        response:
+          `Yes — this is the most realistic use-case for a ministry site. Same RAG pattern, narrower scope:\n\n• Corpus = only the published documents the ministry is comfortable answering citizens with (orders, FAQs, service guides)\n• Every answer cites the source doc, so the citizen sees which order or page they can go read themselves\n• Outside the corpus → "I don't have that, please contact the department" — no guessing\n• Comms team sees every Q+A in an audit log and can add a document the moment they notice a recurring gap\n\nThe ministry keeps the authority. The bot just reads faster.`,
+      },
+      {
         match: ['crash', 'quit', 'cqdd', 'driven development'],
         response:
           `Phrase I coined for the habit of letting a system crash loudly and exit, rather than wrapping every call in try/catch and limping along:\n\n• Silent failures are the most expensive bugs I've ever fixed — you find them six months later when the data is already wrong\n• A crash with a stack trace is a gift — it tells you exactly where and why\n• Catch only at the boundaries (request handler, queue worker) where you can log, alert, and exit cleanly\n• Inside business logic: let it explode\n\nControversial take. I still defend it in ticket threads.`,
@@ -2645,7 +2651,7 @@
         if (match.some(kw => n.includes(kw))) return response;
       }
       // Fallback — the honest version: sample KB, bigger pattern
-      return `Good question. This sample only knows a handful of topics from my own KB — but the same architecture handles any domain you point it at.\n\nA tiny example from the other end of the scale: <strong>caffecito</strong>, a small café ordering tool I built for family use, runs on the same pattern — grounded on a single menu PDF instead of a ministry archive. Same code, different corpus.\n\nIf you want a grounded, auditable assistant on your ministry, agency, or small-business site: <strong>khindol.madraimov@gmail.com</strong>`;
+      return `This demo only knows a small part of my own KB, but the pattern is the real point: grounded answers from a bounded document set.\n\nA tiny example from the other end of the scale: <strong>caffecito</strong>, a small café ordering tool I built for family use, runs on the same pattern — grounded on a single menu PDF instead of a ministry archive. Same code, different corpus.\n\nIf that is the kind of assistant you need for a ministry, agency, or small business site, write to me: <strong>khindol.madraimov@gmail.com</strong>`;
     }
 
     function sendMessage(text) {
