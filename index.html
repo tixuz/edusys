@@ -225,6 +225,27 @@
     /* ══════════════════════════════════════════════════════
        HERO
     ══════════════════════════════════════════════════════ */
+    .hero-section {
+      position: relative;
+      background:
+        linear-gradient(
+          160deg,
+          oklch(14% 0.022 225 / 0.82) 0%,
+          oklch(18% 0.020 230 / 0.65) 40%,
+          oklch(12% 0.018 220 / 0.85) 100%
+        ),
+        url('photos/appolo-temple.jpg') center 40% / cover no-repeat;
+    }
+    [data-theme="light"] .hero-section {
+      background:
+        linear-gradient(
+          160deg,
+          oklch(92% 0.016 215 / 0.55) 0%,
+          oklch(96% 0.010 210 / 0.35) 50%,
+          oklch(88% 0.020 220 / 0.60) 100%
+        ),
+        url('photos/appolo-temple.jpg') center 40% / cover no-repeat;
+    }
     .hero {
       min-height: 100vh;
       display: grid;
@@ -1099,7 +1120,7 @@
   </header>
 
   <!-- ═══ HERO ═══════════════════════════════════════════ -->
-  <section style="padding:0;">
+  <section class="hero-section" style="padding:0;">
     <div class="hero">
       <!-- Left: Copy -->
       <div>
