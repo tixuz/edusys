@@ -418,6 +418,50 @@
     }
     .badge-icon { color: var(--success); font-size: 1rem; }
 
+    /* floating hero portrait */
+    .hero-portrait-float {
+      position: absolute;
+      top: -28px; right: -24px;
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--surface-2);
+      box-shadow: 0 8px 28px oklch(0% 0 0 / 0.35);
+      background: var(--surface-2);
+      animation: drift 7s ease-in-out 1s infinite;
+      z-index: 2;
+    }
+    .hero-portrait-float img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 720px) {
+      .hero-portrait-float { width: 84px; height: 84px; top: -20px; right: -8px; }
+    }
+
+    /* inline photo accents */
+    .photo-accent {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 24px oklch(0% 0 0 / 0.18);
+      object-fit: cover;
+    }
+    .photo-accent--square { aspect-ratio: 1 / 1; }
+    .photo-accent--wide   { aspect-ratio: 16 / 10; }
+    .photo-accent--tall   { aspect-ratio: 4 / 5; }
+    .photo-caption {
+      display: block;
+      margin-top: var(--space-2);
+      font-size: 0.75rem;
+      color: var(--text-3);
+      font-style: italic;
+    }
+
     /* ══════════════════════════════════════════════════════
        SHARED SECTION STYLES
     ══════════════════════════════════════════════════════ */
@@ -1083,6 +1127,9 @@
 
       <!-- Right: Live dashboard mockup -->
       <div class="hero-visual">
+        <div class="hero-portrait-float" aria-hidden="false">
+          <img src="photos/khindol-sagalassos.jpg" alt="Dr Khindol Madraimov at Sagalassos, Turkey" loading="lazy" />
+        </div>
         <div class="hero-card" data-aos="fade-up" data-aos-duration="700">
           <div class="hcard-header">
             <span class="hcard-title">Career Snapshot</span>
@@ -1296,6 +1343,13 @@
         <div class="testimonial-card" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="200">
           <span class="quote-mark">"</span>
           <p class="quote-text">Personal projects that belong here too: <code>edusys</code> (this very site you are reading), <code>caffecito</code> (a small café ordering tool), <code>gws-sheets</code> (a Claude Code skill), <code>soulmate</code>, <code>namozimbot</code>. Not everything I build is enterprise-scale. Some of it is just for me and my family.</p>
+          <figure style="margin:var(--space-4) 0 0;">
+            <img src="photos/singapore-marina.jpg"
+                 alt="Marina Bay Sands skyline, Singapore"
+                 class="photo-accent photo-accent--wide"
+                 loading="lazy" />
+            <figcaption class="photo-caption">Marina Bay, 2022. Some of the best engineering cities are also some of the best reasons to walk away from the keyboard.</figcaption>
+          </figure>
           <div class="reviewer">
             <div class="reviewer-avatar"><i class="fa-solid fa-code"></i></div>
             <div>
@@ -1319,6 +1373,13 @@
           <span class="eyebrow">Case Studies</span>
           <h2 class="section-title">Real systems.<br/>Real results.</h2>
         </div>
+        <figure data-aos="fade-up" data-aos-duration="700" data-aos-once="true" style="margin:0; max-width:320px;">
+          <img src="photos/apollo-temple.jpg"
+               alt="Temple of Apollo, Side, Turkey"
+               class="photo-accent photo-accent--wide"
+               loading="lazy" />
+          <figcaption class="photo-caption">Temple of Apollo, Side. Structures that stayed standing for two thousand years are worth taking notes from.</figcaption>
+        </figure>
         <a href="#cta" class="btn-outline" data-aos="fade-up" data-aos-once="true">
           All Case Studies <i class="fa-solid fa-arrow-right btn-arrow"></i>
         </a>
@@ -1393,6 +1454,13 @@
           <p class="cta-lead">
             Before and alongside the EMIS work, I've been an editor and translator with Издательство Диля in Saint Petersburg — roughly a decade of books on Islamic studies, plus one I wrote myself. Nobody expects a published Arabic-language workbook from an EMIS engineer. That is rather the point.
           </p>
+          <figure style="margin:var(--space-5) 0 var(--space-4); max-width:340px;">
+            <img src="photos/greek-inscription.jpg"
+                 alt="Greek inscription: ΟΣΙΩ ΚΑΙ ΔΙΚΑΙΩ — piously and justly"
+                 class="photo-accent photo-accent--wide"
+                 loading="lazy" />
+            <figcaption class="photo-caption">ΟΣΙΩ ΚΑΙ ΔΙΚΑΙΩ — "piously and justly". A stone I stopped for on the road. It is still how I try to write code.</figcaption>
+          </figure>
           <div class="cta-checks">
             <div class="cta-check"><i class="fa-solid fa-book"></i> Author: <em>Арабский язык. Пропись. Алфавит, чтение, письмо</em> — co-authored with Ибн Мирзакарим ал-Карнаки, Диля 2020, ISBN 978-5-88503-930-7</div>
             <div class="cta-check"><i class="fa-solid fa-feather"></i> Editor &amp; translator of 10+ works on Islamic studies, published 2006–2022</div>
@@ -1652,6 +1720,12 @@
       font-size: 1rem;
       color: #fff;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .cw-header-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .cw-header-info { flex: 1; min-width: 0; }
     .cw-header-name {
@@ -1726,6 +1800,12 @@
       flex-shrink: 0;
       font-weight: 700;
       font-family: 'Roboto', sans-serif;
+      overflow: hidden;
+    }
+    .cw-msg-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .cw-bubble {
       max-width: 78%;
@@ -1886,7 +1966,7 @@
   <!-- Chat window -->
   <div id="chat-window" role="dialog" aria-label="Dr Khindol Assistant" aria-modal="true">
     <div class="cw-header">
-      <div class="cw-header-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div class="cw-header-avatar"><img src="photos/khindol-warm.jpg" alt="Dr Khindol" loading="lazy" /></div>
       <div class="cw-header-info">
         <div class="cw-header-name">Dr Khindol Assistant</div>
         <div class="cw-header-status">
@@ -1901,7 +1981,7 @@
 
     <div class="cw-messages" id="cw-messages">
       <div class="cw-msg cw-msg--bot">
-        <div class="cw-msg-avatar">DK</div>
+        <div class="cw-msg-avatar"><img src="photos/khindol-warm.jpg" alt="Dr Khindol" loading="lazy" /></div>
         <div class="cw-bubble">
           Hi — I can help with OpenEMIS setup, EMIS administration, or anything about education IT infrastructure. Ask anything.
         </div>
@@ -1983,7 +2063,15 @@
       msg.className = `cw-msg cw-msg--${role}`;
       const avatar = document.createElement('div');
       avatar.className = 'cw-msg-avatar';
-      avatar.textContent = role === 'bot' ? 'DK' : 'You';
+      if (role === 'bot') {
+        const img = document.createElement('img');
+        img.src = 'photos/khindol-warm.jpg';
+        img.alt = 'Dr Khindol';
+        img.loading = 'lazy';
+        avatar.appendChild(img);
+      } else {
+        avatar.textContent = 'You';
+      }
       const bubble = document.createElement('div');
       bubble.className = 'cw-bubble';
       // Minimal markdown: bold, links
@@ -2001,7 +2089,7 @@
       typing.className = 'cw-typing';
       typing.id = 'cw-typing-indicator';
       typing.innerHTML = `
-        <div class="cw-msg-avatar">DK</div>
+        <div class="cw-msg-avatar"><img src="photos/khindol-warm.jpg" alt="Dr Khindol" loading="lazy" /></div>
         <div class="cw-typing-dots">
           <div class="cw-typing-dot"></div>
           <div class="cw-typing-dot"></div>

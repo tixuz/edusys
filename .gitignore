@@ -1,4 +1,10 @@
 .DS_Store
-*.png
-*.jpg
-*.jpeg
+.playwright-mcp/
+
+# Dev screenshots only — allow photos/
+screenshot-*.png
+screenshot-*.jpg
+
+# Allow everything in photos/
+!photos/
+!photos/**
